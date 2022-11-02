@@ -19,7 +19,7 @@ export const MainAppBar = () => {
 
   const { mutate: logout } = useLogoutUserQuery({
     onSuccess: () => {
-      navigate("/login");
+      navigate("/");
       queryClient.invalidateQueries(["user"]);
     },
   });
@@ -45,7 +45,7 @@ export const MainAppBar = () => {
             }}
             onClick={() => navigate("/")}
           >
-            App
+            TweetReal
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button
